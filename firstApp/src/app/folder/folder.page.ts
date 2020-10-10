@@ -38,7 +38,25 @@ export class FolderPage implements OnInit {
     }
 
     for(let item of this.animalsArray){
-      console.log("New for loop", item);
+      console.log('New for loop', item);
+    }
+
+    this.animalsArray.forEach(item=>{
+      console.log('For each', item);
+    })
+  }
+
+  checkAnimal() {
+    if(this.user_xyz == 'duck'){
+      alert("quack");
+    }
+
+    else if(this.user_xyz == 'snake'){
+      alert("tsss");
+    }
+
+    else{
+      alert("No Animal detected");
     }
   }
 

@@ -25,8 +25,8 @@
     <ion-button (click)="whatsMyName()">SUBMIT NAME</ion-button>
     <br>
     <ion-button (click)="consoleArrays()">SHOW ANIMAL IN LOG</ion-button>
-    <br>
-
+    <ion-button color="danger" (click)="checkAnimal()">CHECK ANIMAL</ion-button>
+    <h1 *ngIf="user_xyz == 'duck'">WOW URE A DUCK!</h1>
     <ion-list>
       <ion-item *ngFor="let haiwan of animalsArray">
         {{ haiwan | uppercase }}
