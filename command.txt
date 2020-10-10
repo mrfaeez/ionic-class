@@ -1,1 +1,9 @@
 npm install -g @ionic/cli
+ionic serve
+node index.js
+
+npm install firebase --save
+
+
+ionic g page login
+ionic g service services/firebase
