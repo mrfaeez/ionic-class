@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import '@capacitor-community/http';
+import { Plugins } from '@capacitor/core';
 
 @Component({
   selector: 'app-folder',
@@ -58,6 +60,19 @@ export class FolderPage implements OnInit {
     else{
       alert("No Animal detected");
     }
+  }
+
+  async getStuff(){
+
+    const { Http } = Plugins;
+
+    const ret = await Http.request({
+      method: 'GET',
+      url: 'http://localhost:3000/',
+    })
+    .then(res=>{
+      console.log("From Server", res);
+    })
   }
 
 }
