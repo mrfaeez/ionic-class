@@ -9,10 +9,37 @@ import { ActivatedRoute } from '@angular/router';
 export class FolderPage implements OnInit {
   public folder: string;
 
+  user_xyz:any;
+  animalsArray=[
+    'cats',
+    'dogs',
+    'chicken',
+    'cow',
+    'goat'
+  ]
+
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+  }
+
+  fireAlert() {
+    alert("This is a fire alert!")
+  }
+
+  whatsMyName() {
+    alert(this.user_xyz)
+  }
+
+  consoleArrays() {
+    for(var x=0; x<this.animalsArray.length; x++){
+      console.log('Animals', this.animalsArray[x])
+    }
+
+    for(let item of this.animalsArray){
+      console.log("New for loop", item);
+    }
   }
 
 }

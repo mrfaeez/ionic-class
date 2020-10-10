@@ -17,5 +17,21 @@
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <br>
+    <!-- this is the button  -->
+    <ion-button (click)="fireAlert()">FIRE ALERT!</ion-button>
+    <br>
+    <ion-input [(ngModel)]='user_xyz' type='text' placeholder="Name?"></ion-input>
+    <ion-button (click)="whatsMyName()">SUBMIT NAME</ion-button>
+    <br>
+    <ion-button (click)="consoleArrays()">SHOW ANIMAL IN LOG</ion-button>
+    <br>
+
+    <ion-list>
+      <ion-item *ngFor="let haiwan of animalsArray">
+        {{ haiwan | uppercase }}
+      </ion-item>
+    </ion-list>
+
   </div>
 </ion-content>
