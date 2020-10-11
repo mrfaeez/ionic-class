@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+
+  <img src="../../assets/owl.jpg" alt="">
+  <h1 class="ion-text-center"><b>MY TO DO LIST</b></h1>
+
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]='email' type="email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]='password' type="password" placeholder="Password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="loginEmail()">SIGN IN</ion-button>
 
 </ion-content>
