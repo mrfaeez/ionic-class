@@ -37,3 +37,9 @@ ng add @angular/pwa
 - copy www folder from 'todolist' to 'firebasehosting' (just paste www folder anywhere in hosting)
 
 firebase deploy --only hosting
+
+npm install --save request
+
+firebase deploy
+
+ionic g page allList
