@@ -43,3 +43,7 @@ npm install --save request
 firebase deploy
 
 ionic g page allList
+
+npm install capacitor (not complete)
+
+npm install cors --save
