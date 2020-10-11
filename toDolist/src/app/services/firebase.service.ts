@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { cordovaFunctionOverride } from '@ionic-native/core';
 import { rejects } from 'assert';
 import * as firebase from 'firebase';
 
@@ -59,7 +60,8 @@ export class FirebaseService {
         task:task,
         timestamp:timestamp,
         status:'new',
-        uid: user.uid
+        uid: user.uid,
+        // location: location
       }
 
       firebase

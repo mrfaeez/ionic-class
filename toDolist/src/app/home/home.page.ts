@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { from } from 'rxjs';
 import { FirebaseService } from '../services/firebase.service';
+
+import { Plugins } from '@capacitor/core';
+const { Geolocation } = Plugins;
 
 @Component({
   selector: 'app-home',
@@ -56,7 +60,16 @@ export class HomePage {
     await this.nav.navigateBack('login')
   }
 
-  createTask(){
+  async createTask(){
+
+    const coordinates = await Geolocation.getCurrentPosition();
+    console.log('Current', coordinates.coords.latitude, coordinates.coords.latitude);
+    
+    const location={
+      lat: coordinates.coords.latitude,
+      long: coordinates.coords.latitude 
+    }
+
     this.fbs.createEntry(this.task)
     .then(_=>{
       console.log("TASK ADDED")

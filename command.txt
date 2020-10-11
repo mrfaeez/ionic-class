@@ -1,4 +1,7 @@
 npm install -g @ionic/cli
+
+ionic start <appname>
+
 ionic serve
 node index.js
 
@@ -7,3 +10,18 @@ npm install firebase --save
 
 ionic g page login
 ionic g service services/firebase
+
+
+-setup firebase
+(add sdk to environment.ts)
+(add import blabla to app.module.ts)
+
+- async, await -> dont want everything to execute/happen, will execute line by line
+- promise -> will show result resolve or reject
+
+npm install -g cordova-res
+
+ionic build
+npx cap add android
+cordova-res android --skip-config --copy
+
