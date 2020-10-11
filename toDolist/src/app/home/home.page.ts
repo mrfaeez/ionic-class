@@ -19,13 +19,23 @@ export class HomePage {
   ) {}
 
   ionViewWillEnter(){
-    this.fbs.readEntry()
-    .then(res=>{
-      console.log("TO DO", res);
-      this.taskList=res;
+
+    this.fbs.checkUser()
+    .then(_=>{
+
+      this.fbs.readEntry()
+      .then(res=>{
+        // console.log("TO DO", res);
+        this.taskList=res;
+      })
+      .catch(err=>{
+        console.log(err);
+      })
+
     })
     .catch(err=>{
       console.log(err);
+      this.signOut();
     })
   }
 
