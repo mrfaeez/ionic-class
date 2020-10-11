@@ -1,4 +1,7 @@
 <ion-header [translucent]="true">
+
+  
+
   <ion-toolbar color='danger'>
     <ion-title>
       To Do List
@@ -17,6 +20,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <ion-button (click)="takePicture()"><ion-icon name="camera-outline"></ion-icon></ion-button>
+
+  <img *ngIf="imagePath" src="{{ imagePath }}" alt="">
+
   <ion-card *ngIf="addToDO==true">
     <ion-card-content>
       <ion-item>

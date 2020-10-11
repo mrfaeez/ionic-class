@@ -21,7 +21,19 @@ ionic g service services/firebase
 
 npm install -g cordova-res
 
-ionic build
-npx cap add android
 cordova-res android --skip-config --copy
 
+ionic build
+npx cap add android
+npx cap open android
+
+
+
+firebase init
+ng add @angular/pwa
+
+(ionic build will generate www folder)
+
+- copy www folder from 'todolist' to 'firebasehosting' (just paste www folder anywhere in hosting)
+
+firebase deploy --only hosting
