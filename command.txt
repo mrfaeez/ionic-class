@@ -1,16 +1,65 @@
-npm install -g @ionic/cli
-
-ionic start <appname>
-
-ionic serve
-node index.js
-
-npm install firebase --save
 
 
-ionic g page login
-ionic g service services/firebase
+-------------------------------IONIC COMMANDS-----------------------------------------
 
+other references : https://ionicframework.com/docs
+		   https://capacitorjs.com/docs
+
+
+----------intro------------
+
+
+(install ionic)
+$ npm install -g @ionic/cli 
+
+(start ionic in current dir)
+$ ionic start <appname> 
+
+(write in dir to run in web browser)
+$ ionic serve
+
+
+---------/intro-------------
+
+
+---------express server-------------
+
+
+(expressjs boilerplate - https://expressjs.com/en/starter/hello-world.html)
+(install express server node module)
+$ npm init
+$ npm install express --save 
+
+(run express server)
+$ node index.js
+
+(install body parser)
+$ npm install body-parser --save
+
+
+
+--------/express server-------------
+
+
+
+--------ionic page---------------
+
+
+(get ionic pages)
+$ ionic g page login
+$ ionic g service services/firebase
+$ ionic g page allList
+
+
+---------/ionic page-----------------
+
+
+
+----------------firebase----------------
+
+
+(install firebase)
+$ npm install firebase --save
 
 -setup firebase
 (add sdk to environment.ts)
@@ -19,31 +68,47 @@ ionic g service services/firebase
 - async, await -> dont want everything to execute/happen, will execute line by line
 - promise -> will show result resolve or reject
 
-npm install -g cordova-res
 
-cordova-res android --skip-config --copy
-
-ionic build
-npx cap add android
-npx cap open android
+---------------/firebase-------------------
 
 
 
-firebase init
-ng add @angular/pwa
+---------------cordova and android build--------------------
+
+
+$ npm install -g cordova-res
+
+$ cordova-res android --skip-config --copy
+
+$ ionic build
+$ npx cap add android
+$ npx cap open android
+
 
 (ionic build will generate www folder)
-
 - copy www folder from 'todolist' to 'firebasehosting' (just paste www folder anywhere in hosting)
 
-firebase deploy --only hosting
 
-npm install --save request
+----------------/cordova and android build-----------------------
 
-firebase deploy
 
-ionic g page allList
 
-npm install capacitor (not complete)
+-------------------firebase hosting-----------------------
 
-npm install cors --save
+
+$ firebase init
+$ ng add @angular/pwa
+
+$ firebase deploy --only hosting
+
+$ npm install --save request
+
+$ firebase deploy
+
+
+$ npm install capacitor (not complete)
+
+$ npm install cors --save
+
+
+----------------/firebase hosting-----------------------
