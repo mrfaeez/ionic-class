@@ -1,0 +1,27 @@
+Refer this document for error debugging
+
+
+
+
+-------------firebase error-----------------
+
+
+Error details : 
+Property 'auth' does not exist on type 'typeof import
+Property 'auth' does not exist on type ......
+
+
+instead of using
+
+import * as firebase from 'firebase';
+
+
+use
+
+import firebase from '@firebase/app';
+import '@firebase/auth'; (custom based on module used)
+
+
+
+
+-----------/firebase error----------------------

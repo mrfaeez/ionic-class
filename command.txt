@@ -47,7 +47,6 @@ $ npm install body-parser --save
 
 (get ionic pages)
 $ ionic g page login
-$ ionic g service services/firebase
 $ ionic g page allList
 
 
@@ -60,6 +59,8 @@ $ ionic g page allList
 
 (install firebase)
 $ npm install firebase --save
+
+$ ionic g service services/firebase
 
 -setup firebase
 (add sdk to environment.ts)
@@ -95,7 +96,7 @@ $ npx cap open android
 
 -------------------firebase hosting-----------------------
 
-
+$ firebase login
 $ firebase init
 $ ng add @angular/pwa
 
