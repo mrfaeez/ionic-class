@@ -84,6 +84,7 @@ $ cordova-res android --skip-config --copy
 $ ionic build
 $ npx cap add android
 $ npx cap open android
+$npx cap sync
 
 
 (ionic build will generate www folder)
