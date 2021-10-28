@@ -82,8 +82,10 @@ $ npm install -g cordova-res
 $ cordova-res android --skip-config --copy
 
 $ ionic build
+$ ionic build --prod --aot --minifyjs --minifycss and --optimizejs
 $ npx cap add android
 $ npx cap open android
+$npx cap sync
 
 
 (ionic build will generate www folder)
